@@ -3,7 +3,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="UserDAO">
-	<insert id="insertUser" parameterType="user">
+	<!-- <insert id="insertUser" parameterType="user">
 		INSERT INTO USERS(id,pw,nickname) VALUES(#{id},#{pw},#{nickName})
 	</insert>
 	<update id="updateUser" parameterType="user">
@@ -20,5 +20,5 @@
 	</select>
 	<select id="confirmUser" parameterType="user" resultType="int">
 		SELECT NVL(COUNT(*),0) FROM USERS WHERE ID=#{id}
-	</select>
+	</select> -->
 </mapper>

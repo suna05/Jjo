@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- 어노테이션 인식을 위한 설정(설정 패키지 안에 있는 모든 어노테이션 인식) -->
-	<context:component-scan base-package="com.web.nuri"></context:component-scan>
+	<context:component-scan base-package="com.web.rnb"></context:component-scan>
 	
 	<!-- DataSource -->
 	<context:property-placeholder location="classpath:config/database.properties"/>
@@ -49,7 +49,7 @@
 	</tx:advice>
 	<!-- txManagerAdvice aop 트랜잭션을 설정할 클래스의 모든 메소드를 트랜잭션 대상으로 선택하는 것이 좋다.-->
 	<aop:config>
-		<aop:pointcut expression="execution(* com.web.nuri..*(..))" id="txPointCut"/> <!-- "bean(*Service)" 이런식으로 빈은 대상으로 포인트컷을 지정해도된다. -->
+		<aop:pointcut expression="execution(* com.web.rnb..*(..))" id="txPointCut"/> <!-- "bean(*Service)" 이런식으로 빈은 대상으로 포인트컷을 지정해도된다. -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
 	</aop:config>
 </beans>
