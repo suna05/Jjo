@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
-	
+public class HomeController 
+{
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
@@ -25,8 +25,9 @@ public class HomeController {
 	@RequestMapping(value = "/hello.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
-		System.out.println("�׽�Ʈ ���");
-		System.out.println("�׽�Ʈ ��� 2");
+		System.out.println("테스트 입니다.");
+		System.out.println("테스트 입니다. 2");
+		System.out.println("테스트 입니다. 3");
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
